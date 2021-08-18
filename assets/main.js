@@ -6,10 +6,10 @@ client.invoke("resize", { width: "100%", height: "200px" });
 const getCustomField = async () => {
     // Grabs custom field value
     const customFieldData = await client.get(
-        "ticket.customField:custom_field_360045346052"
+        "ticket.customField:custom_field_{id}"
     );
     const customFieldValue =
-        customFieldData["ticket.customField:custom_field_360045346052"];
+        customFieldData["ticket.customField:custom_field_{id}"];
 
     // Request using the custom field value to query via Search API
     const settings = {
