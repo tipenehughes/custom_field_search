@@ -4,7 +4,7 @@ var client = ZAFClient.init();
 client.invoke("resize", { width: "100%", height: "200px" });
 
 const getCustomField = async () => {
-    // Grabs custom field value
+    // Grabs custom field value - replace the {id} placeholder with your custom field ID
     const customFieldData = await client.get(
         "ticket.customField:custom_field_{id}"
     );
